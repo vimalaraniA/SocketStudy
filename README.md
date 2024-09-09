@@ -87,11 +87,13 @@ while True:
 OUTPUT : 
 
 CLIENT :
-![image](https://github.com/user-attachments/assets/8d751d18-e5e8-4e4a-a890-d3e89b7fa274)
+
+![image](https://github.com/user-attachments/assets/6067a1d2-dc32-432d-a077-d0967fe8a7d5)
 
 
 SERVER :
-![Screenshot 2024-09-09 214903](https://github.com/user-attachments/assets/7f144fb5-b9ea-4828-8c10-51abd547257b)
+
+![image](https://github.com/user-attachments/assets/03b261cb-b346-41af-ada3-418d4518c45b)
 
 
 ## Result:
