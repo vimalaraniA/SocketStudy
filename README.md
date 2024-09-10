@@ -58,43 +58,45 @@ Socket programming finds applications in various domains, including web developm
 
 CLIENT :
 
-import socket      
-s=socket.socket()       
-s.bind(('localhost',8000))          
-s.listen(5)        
-c,addr=s.accept()             
-while True:                   
-    i=input("Enter a data: ")      
-    c.send(i.encode())            
-    ack=c.recv(1024).decode()               
-    if ack:               
-        print(ack)                 
-        continue         
-    else:             
-        c.close()                  
-        break 
+import socket                       
+ from datetime import datetime          
+ 
+s=socket.socket()                 
+ 
+s.bind(('localhost',8000))                 
+ 
+s.listen(5)           
+ c,addr=s.accept()                  
+ print("Client Address : ",addr)                
+ 
+now = datetime.now()                           
+ 
+c.send(now.strftime("%d/%m/%Y %H:%M:%S").encode())            
+ ack=c.recv(1024).decode()               
+ 
+if ack:                  
+    print(ack)                
+ 
+c.close()             
 	
 SERVER :
 
  
-import socket        
-s=socket.socket()               
-s.connect(('localhost',8000))                   
-while True:                         
-    print(s.recv(1024).decode())                       
-    s.send("Acknowledgement Recived".encode())                               
-
+import socket              
+s=socket.socket()                    
+s.connect(('localhost',8000))                     
+print(s.getsockname())                  
+print(s.recv(1024).decode())                      
+s.send("acknowledgement recived from the server".encode())           
 OUTPUT : 
 
 CLIENT :
 
-![image](https://github.com/user-attachments/assets/6067a1d2-dc32-432d-a077-d0967fe8a7d5)
-
+![image](https://github.com/user-attachments/assets/18092be5-8dd7-4696-9a2d-6246c40278db)
 
 SERVER :
 
-![image](https://github.com/user-attachments/assets/03b261cb-b346-41af-ada3-418d4518c45b)
-
+![image](https://github.com/user-attachments/assets/2ab7ad8c-3a81-4e9a-8a7b-d8005d969d87)
 
 ## Result:
 Thus the study of Socket Programming Completed Successfully.
