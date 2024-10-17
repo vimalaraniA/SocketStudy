@@ -1,5 +1,5 @@
-NAME : Preethika N  
-REG NO : 212223040130
+NAME : Vimala Rani A  
+REG NO : 212223040240
 
 # Ex.No:1a  			Study of Socket Programming
 
